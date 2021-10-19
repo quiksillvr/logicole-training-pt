@@ -2,10 +2,14 @@
 h1 {
   margin-bottom: 0;
 }
-nav a {
-  padding: 1rem;
+
+li {
+  margin: 10px 5px;
+}
+/* nav a {
+  padding: 5px;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 5px;ffvffggtg
   display: inline-block;
   background-color: #e8e8e8;
   color: #3d3d3d;
@@ -18,4 +22,4 @@ nav a:hover {
 }
 nav a.active {
   background-color: black;
-}
+} */

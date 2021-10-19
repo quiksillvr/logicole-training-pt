@@ -1,11 +1,18 @@
 <div *ngIf="hero">
     <h2>{{hero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
-    <div>
-        <label for="hero-name">Hero name: </label>
-        <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-    </div>
 
-    <button (click)="goBack()">go back</button>
-    <button (click)="save()">save</button>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default"><span>ID: </span>{{hero.id}}</span>
+        </div>
+        <div class="heroName">
+          <input type="text" [(ngModel)]="hero.name" placeholder="name" id="hero-name" class="form-control"
+            aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group-append">
+            <button class="btn btn-success" (click)="save()">Save</button>
+            <button class="btn btn-secondary" (click)="goBack()">Back to Heroes</button>
+          </div>
+        
+      </div>
 </div>
