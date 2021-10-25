@@ -7,7 +7,7 @@
       <input type="text" #searchBox id="search-box" (input)="search(searchBox.value)" class="form-control"
         aria-label="Default" aria-describedby="inputGroup-sizing-default">
         <div class="list-group"  *ngFor="let hero of heroes$ | async">
-          <a routerLink="/detail/{{hero.id}}" class="list-group-item list-group-item-action">
+          <a uiSref="detail" [uiParams]="{ id: hero.id }" class="list-group-item list-group-item-action">
             {{hero.name}}
           </a>
         </div>

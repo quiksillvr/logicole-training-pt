@@ -1,7 +1,7 @@
 <h2>Top Heroes</h2>
   <ul class="nav justify-content-center">
       <div class="btn-group" role="group">
-      <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}" class="btn btn-success btn-lg mr-1">
+      <a *ngFor="let hero of heroes" uiSref="detail" [uiParams]="{ id: hero.id }" class="btn btn-success btn-lg mr-1">
         {{hero.name}}
       </a>
     </div>

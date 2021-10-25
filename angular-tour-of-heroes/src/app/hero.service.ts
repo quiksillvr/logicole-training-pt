@@ -15,7 +15,13 @@ export class HeroService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
+  heroId: number;
+
   constructor(private messageService: MessageService, private http: HttpClient,) { }
+
+  passHeroId(id: number) {
+    this.heroId = id;
+  }
 
   /** GET heroes from the server */
   getHeroes(): Observable<Hero[]> {

@@ -12,22 +12,20 @@
     </div>
 </div>
 
-
-
 <div *ngFor="let hero of heroes">
     <div class="input-group my-0">
         <div class="input-group-prepend">
-            <a routerLink="/detail/{{hero.id}}">
+            <a uiSref="detail" [uiParams]="{ id: hero.id }">
                 <span class="input-group-text">{{hero.id}}</span>
             </a>
         </div>
         <div class="input-group-prepend-1">
-            <a routerLink="/detail/{{hero.id}}">
+            <a uiSref="detail" [uiParams]="{ id: hero.id }">
                 <span class="input-group-text">{{hero.name}}</span>
             </a>
         </div>
         <div class="input-group-append">
-            <button class="btn btn-danger" title="delete hero" (click)="delete(hero)">x</button>
+            <button class="btn btn-danger" title="delete hero" (click)="delete(hero)">X</button>
         </div>
     </div>
 </div> 
